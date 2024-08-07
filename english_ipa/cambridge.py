@@ -32,6 +32,10 @@ class CambridgeDictScraper:
         ipa = self.get_ipa(word)
         return ipa.model_dump_json()
 
+    def get_ipa_in_str(self, word: str) -> str:
+        ipa = self.get_ipa(word)
+        return ipa.model_dump_str()
+
     def _get_html(self, word: str) -> Union[BeautifulSoup, None]:
         url = self.base_url + word
         req = requests.get(url, headers=self.header)

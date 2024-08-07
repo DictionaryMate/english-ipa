@@ -13,4 +13,8 @@ ipa_in_dict = scraper.get_ipa_in_dict("hello")
 ipa_in_json = scraper.get_ipa_in_json("hello")
 # returned value
 # {"word":"hello","ipas":[{"region":"uk","ipas":["/heˈləʊ/"]},{"region":"us","ipas":["/heˈloʊ/"]}]}
+
+ipa_in_str = scraper.get_ipa_in_str("hello")
+# returned value
+# uk: ['/heˈləʊ/']; us: ['/heˈloʊ/']
 ```
