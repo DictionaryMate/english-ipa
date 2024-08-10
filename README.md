@@ -18,3 +18,22 @@ ipa_in_str = scraper.get_ipa_in_str("hello")
 # returned value
 # uk: ['/heˈləʊ/']; us: ['/heˈloʊ/']
 ```
+
+### Async Version
+```python
+import asyncio
+
+from english_ipa.cambridge_async import AsyncCambridgeDictScraper
+
+
+async def main():
+    scraper = AsyncCambridgeDictScraper()
+    ipa_in_dict = await scraper.get_ipa_in_dict("apple")
+    print(ipa_in_dict)
+
+
+asyncio.run(main())
+
+# printed value
+# {'word': 'apple', 'ipas': [{'region': 'uk', 'ipas': ['/ˈæp.əl/']}, {'region': 'us', 'ipas': ['/ˈæp.əl/']}]}
+```
