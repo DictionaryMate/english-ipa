@@ -1,6 +1,11 @@
 # English IPA
 a python package for getting the IPA of an given English word
 
+## Instaill
+```
+pip install english-ipa
+```
+
 ## Usage
 ```python
 from english_ipa.cambridge import CambridgeDictScraper
